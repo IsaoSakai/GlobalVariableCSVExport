@@ -1,0 +1,9 @@
+c:\users\isakai\documents\visual studio 2017\Projects\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+c:\users\isakai\documents\visual studio 2017\Projects\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+c:\users\isakai\documents\visual studio 2017\Projects\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+c:\users\isakai\documents\visual studio 2017\Projects\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+c:\users\isakai\documents\visual studio 2017\Projects\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+c:\users\isakai\documents\visual studio 2017\Projects\ConsoleApp1\ConsoleApp1\bin\Debug\CsvHelper.dll
+c:\users\isakai\documents\visual studio 2017\Projects\ConsoleApp1\ConsoleApp1\bin\Debug\System.ValueTuple.dll
+c:\users\isakai\documents\visual studio 2017\Projects\ConsoleApp1\ConsoleApp1\bin\Debug\CsvHelper.xml
+c:\users\isakai\documents\visual studio 2017\Projects\ConsoleApp1\ConsoleApp1\bin\Debug\System.ValueTuple.xml
