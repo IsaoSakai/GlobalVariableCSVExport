@@ -16,6 +16,8 @@ namespace GlobalVariableCSVExport
         private static void Main()
         {
             Application.EnableVisualStyles();
+            System.IO.DirectoryInfo hDirectionInfo = System.IO.Directory.GetParent(@"//VariableText.txt");
+            MessageBox.Show(hDirectionInfo.ToString());
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
@@ -33,6 +35,15 @@ namespace GlobalVariableCSVExport
         private void Button1_Click(object sender, EventArgs e)
         {
             ShowFolderDialog();
+        }
+
+        public static string[] GetDirectories(string path, string searchPattern) {
+
+            string[] dirs = Directory.GetDirectories(path, searchPattern);
+            foreach( string  dir in dirs){
+                Console.WriteLine(dir);
+            }
+            return null;
         }
 
         //ツールのメイン機能部分
@@ -75,7 +86,8 @@ namespace GlobalVariableCSVExport
             if (result == DialogResult.OK)
             {
                 //okボタンを押されたファイルのパス取得
-                path = fbd.SelectedPath;
+                path = Directory.GetParent("GlobalVariableController.cs").ToString();
+                MessageBox.Show(path);
                 MessageBox.Show(path + "が選択されました", "検査結果", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 //pathファイル直下のすべてのファイル名格納
@@ -85,6 +97,11 @@ namespace GlobalVariableCSVExport
                 //ここで変更をかけたいクラスを検索
                 for ( int i = 0; i < files.Length; i++)
                 {
+                    ProgressBar progressbar = new ProgressBar();
+                    progressbar.Show();
+                    progressbar.Minimum = 0;
+                    progressbar.Maximum = files.Length;
+                    progressbar.Value = i;
                     //検索がヒットしたらget_fileに格納
                     if ( files[i] == path + "\\GlobalVariableController.cs")
                     {
@@ -118,11 +135,12 @@ namespace GlobalVariableCSVExport
                 if ( check_cs != true || check_line != true)
                 {
                     //この後ファイルのパス検索まで戻る
-                    MessageBox.Show("無かった", "取得結果", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("対象のクラスがありません", "取得結果", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
 
             }
+            GetDirectories(path, get_file);
 
             MessageBox.Show("グローバル変数更新完了", "作業完了", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Application.Exit();

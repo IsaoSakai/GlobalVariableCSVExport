@@ -17,3 +17,13 @@ C:\Users\Isakai\Source\Repos\GlobalVariableCSVExport\GlobalVariableCSVExport\Con
 C:\Users\Isakai\Source\Repos\GlobalVariableCSVExport\GlobalVariableCSVExport\ConsoleApp1\obj\Debug\GlobalVariableCSVExport.csprojResolveAssemblyReference.cache
 C:\Users\Isakai\Source\Repos\GlobalVariableCSVExport\GlobalVariableCSVExport\ConsoleApp1\obj\Debug\GlobalVariableCSVExport.exe
 C:\Users\Isakai\Source\Repos\GlobalVariableCSVExport\GlobalVariableCSVExport\ConsoleApp1\obj\Debug\GlobalVariableCSVExport.pdb
+C:\Users\Shibasaki\Documents\GlobalVariableCSVExport\ConsoleApp1\bin\Debug\GlobalVariableCSVExport.exe.config
+C:\Users\Shibasaki\Documents\GlobalVariableCSVExport\ConsoleApp1\obj\Debug\GlobalVariableCSVExport.exe
+C:\Users\Shibasaki\Documents\GlobalVariableCSVExport\ConsoleApp1\obj\Debug\GlobalVariableCSVExport.pdb
+C:\Users\Shibasaki\Documents\GlobalVariableCSVExport\ConsoleApp1\bin\Debug\GlobalVariableCSVExport.exe
+C:\Users\Shibasaki\Documents\GlobalVariableCSVExport\ConsoleApp1\bin\Debug\GlobalVariableCSVExport.pdb
+C:\Users\Shibasaki\Documents\GlobalVariableCSVExport\ConsoleApp1\bin\Debug\CsvHelper.dll
+C:\Users\Shibasaki\Documents\GlobalVariableCSVExport\ConsoleApp1\bin\Debug\System.ValueTuple.dll
+C:\Users\Shibasaki\Documents\GlobalVariableCSVExport\ConsoleApp1\bin\Debug\CsvHelper.xml
+C:\Users\Shibasaki\Documents\GlobalVariableCSVExport\ConsoleApp1\bin\Debug\System.ValueTuple.xml
+C:\Users\Shibasaki\Documents\GlobalVariableCSVExport\ConsoleApp1\obj\Debug\GlobalVariableCSVExport.csprojResolveAssemblyReference.cache
