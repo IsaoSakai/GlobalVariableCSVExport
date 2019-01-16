@@ -19,7 +19,7 @@ namespace ConsoleApp1
     class Program
     {
         /// <summary>
-        /// コマンドライン引数：[csvファイルパス][書き込むテキストファイルパス]
+        /// コマンドライン引数：[csvファイルパス][書き込むテキストファイルパス][クラス名]
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
@@ -31,7 +31,7 @@ namespace ConsoleApp1
                 Console.ReadKey();
                 return;
             }
-            if (args[0].Length == 0 || args[1].Length == 0)
+            if (args[0].Length == 0 || args[1].Length == 0 || args[2].Length == 0)
             {
                 Console.WriteLine("Not Found CommandLine Args.");
                 Console.ReadKey();
@@ -39,6 +39,7 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine("Read File : {0:s}",args[0]);
+            Console.WriteLine("ClassName : {0:s}", args[2]);
 
             //CSVを読み込む
             IEnumerable<GlobalVariableInt> records;
@@ -60,15 +61,25 @@ namespace ConsoleApp1
 
                     //Listを繋げて一つのstringにする
                     var sb = new System.Text.StringBuilder();
+                    
+                    sb.Append("using System;\nusing System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\n\npublic partial class ");
+                    
+                    sb.Append(args[2]);
+                    sb.Append("\n{\n");
+                    
+
                     for (int i=1;i<records2.Count;i++)
                     {
-                        string str = string.Format("public const string {0:s} = \"{1:s}\";", records2[i].variable, records2[i].key);
+                        string str = string.Format("\tpublic const string {0:s} = \"{1:s}\";", records2[i].variable, records2[i].key);
 
                         sb.AppendLine(str);
 
-                        System.Console.Write(str);
-                        System.Console.WriteLine();
                     };
+                    
+                    sb.Append("}");
+
+                    System.Console.Write(sb.ToString());
+                    System.Console.WriteLine();
 
                     //stringをファイルに書き込む
                     Console.WriteLine("Write File : {0:s}", args[1]);
@@ -82,10 +93,10 @@ namespace ConsoleApp1
 
  
 
-#if DEBUG
+//#if DEBUG
             Console.WriteLine("続行するには何かキーを押してください．．．");
             Console.ReadKey();
-#endif
+//#endif
         }
 
 
