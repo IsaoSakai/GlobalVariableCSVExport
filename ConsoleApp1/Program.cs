@@ -93,10 +93,10 @@ namespace ConsoleApp1
 
  
 
-//#if DEBUG
+#if DEBUG
             Console.WriteLine("続行するには何かキーを押してください．．．");
             Console.ReadKey();
-//#endif
+#endif
         }
 
 
