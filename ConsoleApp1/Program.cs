@@ -55,6 +55,9 @@ namespace ConsoleApp1
                     {
                         if (rec.key.Length > 0)
                         {
+                            System.Console.Write(rec.key);
+                            System.Console.WriteLine();
+
                             records2.Add(rec);
                         }
                     }
@@ -68,7 +71,7 @@ namespace ConsoleApp1
                     sb.Append("\n{\n");
                     
 
-                    for (int i=1;i<records2.Count;i++)
+                    for (int i=0;i<records2.Count;i++)
                     {
                         string str = string.Format("\tpublic const string {0:s} = \"{1:s}\";", records2[i].variable, records2[i].key);
 
